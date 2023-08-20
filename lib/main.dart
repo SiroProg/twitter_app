@@ -8,27 +8,42 @@ void main() {
         appBar: AppBar(
           backgroundColor: Colors.white10,
           elevation: 0,
-          title: Center(
-            child: Image(
-              width: 40,
-              height: 40,
-              fit: BoxFit.cover,
-              image: NetworkImage(
-                  'https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png'),
-            ),
+          title: Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                  size: 20,
+                ),
+              ),
+              Expanded(
+                flex: 13,
+                child: Center(
+                  child: Image(
+                    width: 40,
+                    height: 40,
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        'https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png'),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         body: Column(
           children: [
             Expanded(
-              flex: 8,
+              flex: 3,
               child: Padding(
                 padding: EdgeInsets.only(right: 30, left: 30),
                 child: Center(
                   child: Text(
-                    "See what's happening in the world right now.",
+                    "Create your account",
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 25,
                       color: Colors.black,
                     ),
                   ),
@@ -36,119 +51,125 @@ void main() {
               ),
             ),
             Expanded(
+              flex: 1,
               child: Container(
-                margin: EdgeInsets.only(left: 30, right: 30),
+                padding: EdgeInsets.only(left: 10),
+                width: double.infinity,
+                margin:
+                    EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(50),
+                    Radius.circular(5),
+                  ),
+                  border: Border.all(
+                    color: Colors.black,
                   ),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.only(left: 30, right: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 60, right: 10),
-                        child: Expanded(
-                          flex: 1,
-                          child: Image(
-                            width: 20,
-                            height: 20,
-                            image: NetworkImage(
-                                'https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png'),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          'Continue with Google',
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      )
-                    ],
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'John Mobbin',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 10, left: 50, right: 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Expanded(
-                    flex: 4,
-                    child: Text(
-                      '_' * 1000,
-                      maxLines: 1,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Text(' or '),
-                  ),
-                  Expanded(
-                    flex: 4,
-                    child: Text(
-                      '_' * 1000,
-                      maxLines: 1,
-                    ),
-                  ),
-                ],
               ),
             ),
             Expanded(
               flex: 1,
               child: Container(
+                padding: EdgeInsets.only(left: 10),
                 width: double.infinity,
-                height: double.infinity,
-                margin: EdgeInsets.only(left: 30, right: 30),
+                margin:
+                    EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
                 decoration: BoxDecoration(
-                  color: Colors.black,
-                  border: Border.all(color: Colors.black),
                   borderRadius: BorderRadius.all(
-                    Radius.circular(50),
+                    Radius.circular(5),
+                  ),
+                  border: Border.all(
+                    color: Colors.black,
                   ),
                 ),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 30, right: 30, bottom: 10),
-                    child: Expanded(
-                      flex: 1,
-                      child: Text(
-                        'Create account',
-                        style: TextStyle(color: Colors.white),
-                      ),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'johnnmodbin@gmail.com',
+                    style: TextStyle(
+                      color: Colors.black,
                     ),
                   ),
                 ),
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.only(left: 10),
+                width: double.infinity,
+                margin:
+                    EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  ),
+                  border: Border.all(
+                    color: Colors.black,
+                  ),
+                ),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'February 18, 1995',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 4,
               child: Padding(
-                padding:
-                    EdgeInsets.only(left: 30, right: 30, bottom: 10, top: 30),
+                padding: EdgeInsets.only(left: 30, right: 30, top: 20),
                 child: RichText(
                   text: TextSpan(
                     style: TextStyle(
                       height: 1.5,
                       color: Colors.black,
                       wordSpacing: 2,
+                      fontSize: 11,
                     ),
                     children: [
-                      TextSpan(text: 'By signing up, you agree to our '),
+                      TextSpan(text: 'By signing up, you agree to the '),
                       TextSpan(
-                        text: 'Terms, Privancy Polycy',
+                        text: 'Terms of service ',
                         style: TextStyle(
                           color: Colors.blue,
                         ),
                       ),
-                      TextSpan(text: ' and '),
+                      TextSpan(text: 'and Privancy Policy, including '),
                       TextSpan(
                         text: 'Cookie Use.',
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      TextSpan(
+                          text:
+                              'Twitter may use your contact information, including your email address and phone number for purposes outlined in our Privacy Policy, like keeping your account secure and personalizing our services , including ads.'),
+                      TextSpan(
+                        text: 'Learn more.',
+                        style: TextStyle(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      TextSpan(
+                        text:
+                            'Others will be able to find you by email or phone number, when provided, unless you choose otherwise ',
+                      ),
+                      TextSpan(
+                        text: 'here.',
                         style: TextStyle(
                           color: Colors.blue,
                         ),
@@ -158,32 +179,24 @@ void main() {
                 ),
               ),
             ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Expanded(
-                flex: 2,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 30, bottom: 10),
-                  child: RichText(
-                    text: TextSpan(
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                      ),
-                      children: [
-                        TextSpan(text: 'Have an account already? '),
-                        TextSpan(
-                          text: 'Log in',
-                          style: TextStyle(
-                            color: Colors.blue,
-                          ),
-                        )
-                      ],
+            Expanded(
+              flex: 2,
+              child: Container(
+                margin: EdgeInsets.only(left: 30, right: 30, bottom: 30),
+                decoration: BoxDecoration(
+                    color: Colors.blue.shade300,
+                    borderRadius: BorderRadius.all(Radius.circular(50))),
+                child: Center(
+                  child: Text(
+                    'Sign up',
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
                   ),
                 ),
               ),
-            )
+            ),
+            Expanded(flex: 2, child: Container(),)
           ],
         ),
       ),
